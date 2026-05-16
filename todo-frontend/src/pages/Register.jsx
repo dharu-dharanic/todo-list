@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api/api";
 import toast from "react-hot-toast";
+import "../Auth.css";
 
 function Register() {
   const [name, setName] = useState("");

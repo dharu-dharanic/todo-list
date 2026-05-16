@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import API from "../api/api";
 import toast from "react-hot-toast";
 import "../App.css";
+import "../Tasks.css";
 
 function Tasks() {
   const navigate = useNavigate();
