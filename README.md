@@ -1,12 +1,13 @@
 # Todo List App
 
-A full-stack todo management application with user authentication and task tracking.
+A full-stack todo management application with user authentication and task tracking. Built using React.js and CSS3 on the frontend and Node.js, Express.js with MongoDB on the backend.
 
 ## Tech Stack
 
 - **Frontend:** React.js, CSS3
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB (Mongoose)
+- **Authentication:** JWT (JSON Web Token)
 
 ## Features
 
@@ -16,29 +17,84 @@ A full-stack todo management application with user authentication and task track
 - Sort tasks by date, title, or status
 - Pagination for task list
 - Responsive design for mobile and desktop
+- Animated task cards with slide-in effects
+- Dark theme UI with gradient styling
 
-## Pages
+## Screenshots
 
-- Login — user authentication
-- Register — create new account
-- Tasks — manage all todo tasks
+### Login
+![Login](screenshots/login.png)
+
+
+### Register
+![Register](screenshots/register.png)
+
+
+### Tasks
+![Tasks](screenshots/tasks.png)
+
+## Project Structure
+
+```
+todo-list/
+├── todo-frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   └── Tasks.jsx
+│   │   ├── api/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── Auth.css
+│   │   └── Tasks.css
+│   └── package.json
+└── todo-backend/
+    ├── controllers/
+    ├── models/
+    ├── routes/
+    ├── server.js
+    └── .env
+```
 
 ## Run Locally
 
-**Backend:**
+### Prerequisites
+- Node.js installed
+- MongoDB installed and running
+
+### Backend Setup
+
 ```bash
 cd todo-backend
 npm install
+```
+
+Create a `.env` file inside `todo-backend/`:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+```
+
+Start the backend:
+
+```bash
 node server.js
 ```
 
-**Frontend:**
+### Frontend Setup
+
 ```bash
 cd todo-frontend
 npm install
 npm run dev
 ```
 
+Open `http://localhost:5173` in your browser.
+
 ## Author
 
-dharu-dharanic
+dharu-dharanic  
+[GitHub Profile](https://github.com/dharu-dharanic)
